@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=3;
+        function entierAleatoire(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }   
+        var k=entierAleatoire(0, 10);
+        while(a>0)
+        {
+            var x=prompt("introduire un nombre entre 0 et 10");
+            if(x==k)
+            {
+                alert("bravo vous avez gagnés");
+            }
+            else{
+                a--;
+                alert("il vous reste "+a+"essais");
+            }
+        }
+    </script>
+</body>
+</html>

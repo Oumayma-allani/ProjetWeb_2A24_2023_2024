@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p name="center" onclick="centrage_h1()">center</p>
+    <p id="par" onclick="modif_paragraphe()">hello world</p>
+    <script>
+        var text=document.getElementById("par").innerHTML;
+        var center=document.getElementsByName("center");
+        function modif_paragraphe(){
+            document.getElementById("par").innerHTML=text.italics();
+        }
+        function centrage_h1(){
+            center[0].setAttribute("align","center");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function trierTableau(T){
+        var i=0;
+        var j=0;
+        var tmp=0;
+        for(i=0;i<T.length;i++){
+            for(j=i+1;j<T.length;j++){
+                if(T[i]>T[j]){
+                    tmp=T[i];
+                    T[i]=T[j];
+                    T[j]=tmp;
+                    }
+                }
+            }
+        return T;
+    }
+    trierTableau(T);
+    console.log(T);
+    function ajouter_un_element(T,element){
+        i=0
+        if(element<T[i]){
+            T.push(element);
+        }
+        else {i++;}
+        return T;
+    }
+    ajouter_un_element(T,12);
+    console.log(T);
+
+    function renverserTableau(T){
+        var i=0;
+        var j=T.length-1;
+        var tmp=0;
+        while(i<j){
+            tmp=T[i];
+            T[i]=T[j];
+            T[j]=tmp;
+            i++;
+            j--;
+        }
+        return T;
+    }
+    renverserTableau(T);
+    console.log(T);
+    var k=0
+    if(T[k]!=17){
+        k++;
+    }
+    console.log(k);
+    function supprimer_un_element(T,element){
+        var i=0;
+        var j=0;
+        var tmp=0;
+        for(i=0;i<T.length;i++){
+            if(T[i]==element){
+                for(j=i;j<T.length;j++){
+                    T[j]=T[j+1];
+                }
+                T.length--;
+            }
+        }
+        return T;
+    }
+    supprimer_un_element(T,38);
+    console.log(T);
+    </script>
+</body>
+</html>
